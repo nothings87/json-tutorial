@@ -21,6 +21,7 @@ all: link
 deploy: $(APP)
 	@echo "Deploy $<..."
 	@cp $< $(CGI_DIR)/$<.cgi
+	@cp $< $(DVRS_DIR)/$<
 
 
 clean:
@@ -30,6 +31,7 @@ clean:
 WWW = /home/eddie/var/www
 
 CGI_DIR = $(WWW)/servers/cgi-test/cgi-bin
+DVRS_DIR = $(WWW)/servers/cgi-test/DVRS
 
 
 %.o: %.c
