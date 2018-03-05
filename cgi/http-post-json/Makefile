@@ -23,7 +23,7 @@ LDFLAGS+=-L$(CURDIR)/jsmn -ljsmn
 
 link: $(OBJS)
 	@echo "Linking..."
-	$(V)gcc $(LDFLAGS) $^ -o $(APP)
+	$(V)gcc $^ $(LDFLAGS) -o $(APP)
 
 $(APP): $(OBJS)
 	@echo "Linking..."
